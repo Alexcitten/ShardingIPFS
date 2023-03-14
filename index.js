@@ -96,13 +96,12 @@ async function main() {
                         reassembledShard.set(chunk, reassembledOffset)
                         reassembledOffset += chunk.byteLength
                     } catch (err) {
-                        console.error(`Error getting chunk from node ${nodeIndex}`, err)
+                        return console.error(`Error getting chunk from node ${nodeIndex}`, err)
                     }
                 }
 
                 if (!reassembledShard.every((byte, index) => byte === fragmentData[index])) {
-                    console.error(`Shard ${shardInfo.shardIndex} failed verification`)
-                    return
+                    return console.error(`Shard ${shardInfo.shardIndex} failed verification`)
                 }
             }
 
@@ -122,7 +121,7 @@ async function main() {
                     const shardStartIndex = shardInfo.shardIndex * shardSizeBytes
                     reassembledData.set(reassembledShard, shardStartIndex)
                 } else {
-                    console.error(`Failed to reassemble shard ${shardInfo.shardIndex}`)
+                    return console.error(`Failed to reassemble shard ${shardInfo.shardIndex}`)
                 }
             }
 
