@@ -35,10 +35,10 @@ The application can be configured by editing the variables at the beginning of t
 - `pubsubTopic`: The pubsub topic used for communication between the nodes
 
 ### Functions
-- **main()** creates multiple IPFS nodes and publishes the shard information for each node to the pubsub topic.
-- **downloadAndReassemble()** is used to download and reassemble a single shard from its fragments. 
-- **downloadAndReassembleAll()** is used to download and reassemble all the shards of data.
-- **uint8ArrayToString()** convert Uint8Array to string
+- `**main()**` creates multiple IPFS nodes and publishes the shard information for each node to the pubsub topic.
+- `**downloadAndReassemble()**` is used to download and reassemble a single shard from its fragments. 
+- `**downloadAndReassembleAll()**` is used to download and reassemble all the shards of data.
+- `**uint8ArrayToString()** `convert Uint8Array to string
 
 ### Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
