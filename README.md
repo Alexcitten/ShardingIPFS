@@ -17,6 +17,7 @@ Once all the shards are downloaded and reassembled, the code outputs the reassem
 ```
 # Clone the repository
 git clone https://github.com/Alexcitten/ShardingIPFS.git
+cd ShardingIPFS
 npm install
 npm start
 ```
