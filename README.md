@@ -39,6 +39,7 @@ The application can be configured by editing the variables at the beginning of t
 - `downloadAndReassemble()` is used to download and reassemble a single shard from its fragments. 
 - `downloadAndReassembleAll()` is used to download and reassemble all the shards of data.
 - `uint8ArrayToString()` convert Uint8Array to string
+
 With these functions, you can download and reassemble all the shards and obtain the original data as follows:
 ```js
 const reassembledData = await downloadAndReassembleAll(shards)
